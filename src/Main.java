@@ -3,7 +3,7 @@ import static java.lang.System.*;
 public class Main {
     public static void main(String[] args) {
 
-        Bug dude = new Bug();  //instantiate
+        Bug dude = new Bug(30,false);  //instantiate
         Bug dudette = new Bug();
         Bug dudekid = new Bug();
 
@@ -12,6 +12,12 @@ public class Main {
         dudette.sayName();
         dudette.speak();
         dudette.speak();
+
+        dudette.setSize(20);
+        dudekid.setFly(true);
+
+        out.println(dude.canFly());
+        out.println(dudette.getSize());
 
         int ans = dudekid.multiplier(4,21);
         out.println("the answer is "+ ans);
